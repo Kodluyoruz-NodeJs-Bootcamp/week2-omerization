@@ -19,4 +19,4 @@ After logging in, all users list is rendered in `/users` route.
 npm start 
 ```
 
-Then Open `http://localhost:3001` in your browser 
+Then Open `http://localhost:3001` in your browser. MongoDB is prerequisite.
