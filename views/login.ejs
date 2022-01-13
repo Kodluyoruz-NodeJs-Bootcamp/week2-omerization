@@ -1,0 +1,32 @@
+<%- include('partials/header'); -%>
+
+
+    <div>
+        <div style="margin-right: auto;margin-left: auto;max-width: 32rem; padding:2rem 10px 0 10px;">
+
+
+            <form action="/login" method="POST">
+                <h1 style="text-align: center;color:white;padding-bottom: 30px;">Giriş Yapın</h1>
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="registerlabel">Email adresi</label>
+                    <input type="email" class="form-control register-form" id="exampleInputEmail1" name="email"
+                        placeholder="isminiz@ornek.com">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1" class="registerlabel">Parola</label>
+                    <input type="password" class="form-control register-form" id="exampleInputPassword1" name="password"
+                        placeholder="Parolanızı girin">
+                </div>
+                <div style="margin-bottom:1rem;text-align:right;"> <a style="color:white;"
+                        href="/forgot-password">Şifremi unuttum</a> </div>
+                <button type="submit" class="btn btn-primary registerbuton"> Giriş</button>
+                <h4 style="text-align:center;padding-top:1rem; color:white;">Henüz bir hesabınız yok mu? <span
+                        style="color:#ee4b28 !important;"><a href="/register">Üye olun</a> </span></h4>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <%- include('partials/footer'); -%>

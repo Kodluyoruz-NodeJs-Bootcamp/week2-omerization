@@ -1,0 +1,42 @@
+<%- include('partials/header'); -%>
+
+    <div class="container" style="background-color: white;padding:3em;">
+
+        <h1 style="text-align: center;">Kullanıcı Listesi:</h1>
+
+        <p>
+
+
+
+
+        </p>
+
+        <table>
+            <thead>
+                <th>İsim</th>
+                <th>Soyisim</th>
+                <th>Email</th>
+            </thead>
+            <% users.forEach((user)=> { %>
+                <tbody>
+                    <tr>
+                        <td>
+                            <%= user.first_name %>
+                        </td>
+                        <td>
+                            <%= user.last_name %>
+                        </td>
+                        <td>
+                            <%= user.email %>
+                        </td>
+
+                    </tr>
+                </tbody>
+                <% }); %>
+        </table>
+
+
+
+    </div>
+
+    <%- include('partials/footer'); -%>

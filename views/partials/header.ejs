@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Patika Dev</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/js/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/js/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <link href="/js/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+
+
+
+    <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/css/creative.css" rel="stylesheet">
+
+</head>
+
+<body style="background-image: url(/imgs/register-background.jpg);  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+    <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
+
+        <a class="navbar-brand" href="/">
+            <div style="display:flex;">
+                <img src="/imgs/patika.png" style="width:220px;" class="d-none d-md-block  align-top" alt="">
+                <img src="/imgs/patika.png" style="width:220px;" class="d-md-none align-top" alt="">
+                <span style="font-weight:400;color:white;" class="d-none d-md-block">beta</span>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <% if(!currentUser){ %>
+            <div class="collapse navbar-collapse ml-auto" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item d-none d-lg-block">
+                        <a class="nav-link nav-element js-scroll-trigger" href="/register">Üye ol</a>
+                    </li>
+                    <li class="nav-item d-none d-lg-block">
+                        <a class="nav-link nav-element js-scroll-trigger" href="/login">Giriş yap</a>
+                    </li>
+                    <div class="burger-menu-section1">
+                        <li class=" burger-menu-element  d-lg-none">
+                            <a class="nav-link nav-element" href="/">Ana Sayfa</a>
+                        </li>
+                        <li class="burger-menu-element d-lg-none ">
+                            <a class="nav-link nav-element js-scroll-trigger" href="/register">Üye ol</a>
+                        </li>
+                        <li class="burger-menu-element d-lg-none">
+                            <a class="nav-link nav-element js-scroll-trigger" href="/login">Giriş yap</a>
+                        </li>
+                    </div>
+                    <div class="burger-menu-section3">
+                        <li class="burger-menu-element d-lg-none">
+                            <a class="nav-link nav-element" href="/">Yardım</a>
+                        </li>
+                    </div>
+
+                </ul>
+            </div>
+            <% }else{ %>
+                <div class="collapse navbar-collapse ml-auto" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item d-none d-lg-block" >
+                            <a class="nav-link nav-element js-scroll-trigger" style="color:#f53509;"  href="/"><span style=" vertical-align: -webkit-baseline-middle;padding-right:10px;"><%= currentUser.first_name%> <%= currentUser.last_name%></span>
+ 
+                            </a>
+                          </li>
+                        <li class="nav-item d-none d-lg-block">
+                            <div>
+                                <div class="dropdown">
+                                    <div class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        <img src="/imgs/down-arrow.svg" alt=""
+                                            style="height:50px;width:20px;margin-top:10px;">
+                                    </div>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="/">Hesabım</a>
+                                        <a class="dropdown-item" href="#">Profili düzenle</a>
+                                        <a class="dropdown-item" href="#">Yardım</a>
+                                        <a class="dropdown-item" href="/logout">Çıkış yap</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <div class="burger-menu-section1">
+                            <li class=" burger-menu-element  d-lg-none">
+                                <a class="nav-link nav-element" href="/">Ana Sayfa</a>
+                            </li>
+                            <li class="burger-menu-element d-lg-none">
+                                <a class="nav-link nav-element" href="/"> Profilim </a>
+                            </li>
+                        </div>
+                        <div class="burger-menu-section3">
+                            <li class="burger-menu-element d-lg-none">
+                                <a class="nav-link nav-element" href="/">Yardım</a>
+                            </li>
+                            <li class="burger-menu-element d-lg-none">
+                                <a class="nav-link nav-element" href="/logout">Çıkış yap</a>
+                            </li>
+                        </div>
+
+                    </ul>
+                </div>
+                <% } %>
+    </nav>
+
+
+    <% if(error && error.length> 0){ %>
+        <div class="col-lg-8" style="margin:auto;">
+
+            <div class="alert  login-alert" role="danger">
+                <i class="fa fa-bell"></i> <span style="margin-left:20px;">
+                    <%= error %>
+                </span>
+            </div>
+        </div>
+
+        <% } %>
+
+
+
+            <% if(success && success.length> 0){ %>
+                <div class="col-lg-8" style="margin:auto;">
+
+                    <div class="alert  login-alert" role="success">
+                        <i class="fa fa-bell"></i> <span style="margin-left:20px;">
+                            <%= success %>
+                        </span>
+                    </div>
+                </div>
+
+                <% } %>
