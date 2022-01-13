@@ -1,5 +1,5 @@
 # Authentication with JWT & Session NodeJs
-This app is written for the Patika.dev Gusto&RemoteTeam sponsored NodeJs Bootcamp as homework of 2nd week. 
+This app is written for the Patika.dev Gusto&RemoteTeam sponsored NodeJs Bootcamp as homework of 3rd week. 
 
 
 
