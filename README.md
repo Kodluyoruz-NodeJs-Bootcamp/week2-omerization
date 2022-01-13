@@ -3,7 +3,6 @@ This app is written for the Patika.dev Gusto&RemoteTeam sponsored NodeJs Bootcam
 
 
 
-![alt text](https://raw.githubusercontent.com/Kodluyoruz-NodeJs-Bootcamp/week2-omerization/master/public/imgs/patikadevhw2.gif?token=GHSAT0AAAAAABPBJVYXMRGAKYBCQR7S6SZ6YPAOWGQ)
 ![alt text](https://i.ibb.co/Fh8NFzZ/patikadevhw2.gif)
 **Fully responsive:**
 ---
