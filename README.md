@@ -6,6 +6,8 @@ This app is written for the Patika.dev Gusto&RemoteTeam sponsored NodeJs Bootcam
 ![alt text](https://raw.githubusercontent.com/Kodluyoruz-NodeJs-Bootcamp/week2-omerization/master/public/imgs/patikadevhw2.gif?token=GHSAT0AAAAAABPBJVYXMRGAKYBCQR7S6SZ6YPAOWGQ)
 ![alt text](https://i.ibb.co/Fh8NFzZ/patikadevhw2.gif)
 
+![alt text](https://i.ibb.co/0K4GRKT/hw1.jpg) ![alt text](https://i.ibb.co/qCFwDzY/hw2.jpg)
+
 As requested, user authentication system created in the app. 
 
 In order to access `/users` route, user has to be logged in. Authorization control is made by JWT token and session info stored in MongoDB database.
