@@ -16,9 +16,12 @@ After logging in, all users list is rendered in `/users` route.
 
 
 ## How to run?
+Download or clone the repository. In the root folder run in terminal the command:
 
 ```
 npm start 
 ```
 
 Then Open `http://localhost:3001` in your browser. MongoDB is prerequisite.
+
+
